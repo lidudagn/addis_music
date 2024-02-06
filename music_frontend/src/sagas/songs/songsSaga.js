@@ -11,7 +11,7 @@ import {
 
 function* WorkGetSongsFetch() {
   
-  const songs = yield call(() => fetch("http://localhost:4000/songs"));
+  const songs = yield call(() => fetch("https://addis-music-three.vercel.app/songs"));
   const formattedSongs = yield songs.json();
   yield put(getSongsSuccess(formattedSongs));
 }
@@ -19,7 +19,7 @@ function* WorkGetSongsFetch() {
 function* workPostSong(action) {
   console.log(action.payload, "paylod");
    const response = yield call(() =>
-     fetch("http://localhost:4000/songs", {
+     fetch("https://addis-music-three.vercel.app/songs", {
        method: "POST",
        body: JSON.stringify(action.payload),
        headers: {
@@ -38,7 +38,7 @@ function* workPostSong(action) {
 
 function* workDeleteSong(action) {
   const response = yield call(() =>
-    fetch(`http://localhost:4000/songs/${action.payload}`, {
+    fetch(`https://addis-music-three.vercel.app/songs/${action.payload}`, {
       method: "DELETE",
     })
   );
@@ -47,7 +47,7 @@ function* workDeleteSong(action) {
 
 function* workUpdateSong(action) {
   const response = yield call(() =>
-    fetch(`http://localhost:4000/songs/${action.payload.id}`, {
+    fetch(`https://addis-music-three.vercel.app/songs/${action.payload.id}`, {
       method: "PUT",
       body: JSON.stringify(action.payload),
       headers: {
