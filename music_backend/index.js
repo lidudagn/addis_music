@@ -1,9 +1,8 @@
 const express = require("express");
-
-process.env.PORT || 4000;
+const port = process.env.PORT || 9000;
 const musicRouter = require("./routes/MusicRoutes");
 const connectDB = require("./config/db");
-const dotenv = require("dotenv").config();
+const dotenv = require("dotenv").config()
 const cors = require("cors");
 
 const app = express();
