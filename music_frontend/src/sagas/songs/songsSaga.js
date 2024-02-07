@@ -11,7 +11,7 @@ import {
 
 function* WorkGetSongsFetch() {
   
-  const songs = yield call(() => fetch("https://addis-music-frontend.vercel.app/songs"));
+  const songs = yield call(() => fetch("https://addis-music-api.vercel.app/songs"));
   const formattedSongs = yield songs.json();
   yield put(getSongsSuccess(formattedSongs));
 }
@@ -38,7 +38,7 @@ function* workPostSong(action) {
 
 function* workDeleteSong(action) {
   const response = yield call(() =>
-    fetch(`https://https://addis-music-api.vercel.app/${action.payload}`, {
+    fetch(`https://https:/addis-music-api.vercel.app/${action.payload}`, {
       method: "DELETE",
     })
   );
