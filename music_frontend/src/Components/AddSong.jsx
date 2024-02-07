@@ -111,9 +111,9 @@ const AddSong = (props) => {
     window.location.reload();
   };
 
-  const handleSubmit = (e) => {
-    props.song ? handleUpdate(e) : handleAdd(e);
-  };
+  // const handleSubmit = (e) => {
+  //   props.song ? handleUpdate(e) : handleAdd(e);
+  // };
 
   return (
     <Overlay onClick={props.handleCancel}>
