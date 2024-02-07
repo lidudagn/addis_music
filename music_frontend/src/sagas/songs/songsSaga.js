@@ -18,15 +18,15 @@ function* WorkGetSongsFetch() {
 
 function* workPostSong(action) {
   console.log(action.payload, "paylod");
-   const response = yield call(() =>
-     fetch("https://addis-music-frontend.vercel.app/songs", {
-       method: "POST",
-       body: JSON.stringify(action.payload),
-       headers: {
-         "Content-Type": "application/json",
-       },
-     })
-   );
+  const response = yield call(() =>
+    fetch("https://addis-music-frontend.vercel.app/songs", {
+    method: "POST",
+      body: JSON.stringify(action.payload),
+      headers: {
+        "Content-Type": "application/json",
+      },
+  })
+  );
   console.log(response);
   const isPosting = yield select((state) => state.songs.isPosting);
   if (!isPosting) {

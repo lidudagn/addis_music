@@ -89,7 +89,7 @@ const AddSong = (props) => {
     setAlbum("");
     setGenre("");
     window.location.reload();
-    console.log(data,'dataaaaaaaaaaaa')
+
   };
 
   if (props.song) {
