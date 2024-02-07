@@ -4,7 +4,7 @@ import { getGenresSuccess } from "./genresSlice";
 
 function* WorkGetGenresFetch() {
   const genres = yield call(() =>
-    fetch("https://addis-music-one.vercel.app/genres")
+    fetch("https://addis-music-api.vercel.app/genres")
   );
   const formattedGenres = yield genres.json();
   yield put(getGenresSuccess(formattedGenres));
