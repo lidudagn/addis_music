@@ -82,7 +82,7 @@ const AddSong = (props) => {
 
   const handleAdd = (e) => {
     e.preventDefault();
-    console.lod(data);
+    console.log(data);
     // dispatch(postSong(data));
     // setTitle("");
     // setArtist("");
