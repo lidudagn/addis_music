@@ -3,7 +3,7 @@ import { getStatsSuccess } from "./statsSlice";
 
 
 function* WorkGetStatsFetch() {
-  const stats = yield call(() => fetch("https://addis-music-three.vercel.app/stats"));
+  const stats = yield call(() => fetch("https://addis-music-one.vercel.app/stats"));
   const formattedStats = yield stats.json();
   yield put(getStatsSuccess(formattedStats));
 }
