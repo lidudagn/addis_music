@@ -25,5 +25,5 @@ app.use(express.urlencoded({ extended: false }));
 app.use("/", musicRouter);
 
 app.listen(port, () => {
-  console.log(`tserver is running on port ${port}`);
+  console.log(`server is running on port ${port}`);
 });
