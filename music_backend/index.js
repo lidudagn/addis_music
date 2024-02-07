@@ -8,7 +8,7 @@ const cors = require("cors");
 const app = express();
 
 const corsOptions = {
-  origin: "addis-music-project.vercel.app",
+  origin: "",
   credentials: true, //acces
 };
 
