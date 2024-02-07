@@ -102,19 +102,19 @@ const AddSong = (props) => {
     };
   }
 
-  // const handleUpdate = (e) => {
-  //   e.preventDefault();
-  //   dispatch(updateSong(updatedSong));
-  //   setTitle("");
-  //   setArtist("");
-  //   setAlbum("");
-  //   setGenre("");
-  //   window.location.reload();
-  // };
+  const handleUpdate = (e) => {
+    // e.preventDefault();
+    // dispatch(updateSong(updatedSong));
+    // setTitle("");
+    // setArtist("");
+    // setAlbum("");
+    // setGenre("");
+    // window.location.reload();
+  };
 
-  // const handleSubmit = (e) => {
-  //   props.song ? handleUpdate(e) : handleAdd(e);
-  // };
+  const handleSubmit = (e) => {
+    // props.song ? handleUpdate(e) : handleAdd(e);
+  };
 
   return (
     <Overlay onClick={props.handleCancel}>
