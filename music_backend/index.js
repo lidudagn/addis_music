@@ -8,8 +8,9 @@ const cors = require("cors");
 
 const app = express();
 
+
 const corsOptions = {
-  origin: "https://addis-music-project.vercel.app",
+  origin: "https://addis-music-api.vercel.app",
   credentials: true, //acces
 };
 
@@ -24,5 +25,5 @@ app.use(express.urlencoded({ extended: false }));
 app.use("/", musicRouter);
 
 app.listen(port, () => {
-  console.log(`server is running on port ${port}`);
+  console.log(`tserver is running on port ${port}`);
 });
