@@ -1,6 +1,6 @@
 const express = require("express");
-
-const port = process.env.PORT || 9000;
+const port =4000
+//const port = process.env.PORT || 9000;
 const musicRouter = require("./routes/MusicRoutes");
 const connectDB = require("./config/db");
 const dotenv = require("dotenv").config()
