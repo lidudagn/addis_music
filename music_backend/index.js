@@ -10,7 +10,7 @@ const app = express();
 
 
 const corsOptions = {
-  origin: "addis-music-project.vercel.app",
+  origin: "https://addis-music-project.vercel.app",
   credentials: true, //acces
 };
 
