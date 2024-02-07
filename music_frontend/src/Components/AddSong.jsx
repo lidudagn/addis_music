@@ -83,12 +83,12 @@ const AddSong = (props) => {
   const handleAdd = (e) => {
     e.preventDefault();
  
-    // dispatch(postSong(data));
-    // setTitle("");
-    // setArtist("");
-    // setAlbum("");
-    // setGenre("");
-    // window.location.reload();
+    dispatch(postSong(data));
+    setTitle("");
+    setArtist("");
+    setAlbum("");
+    setGenre("");
+    window.location.reload();
     console.log(data,'dataaaaaaaaaaaa')
   };
 
@@ -103,17 +103,17 @@ const AddSong = (props) => {
   }
 
   const handleUpdate = (e) => {
-    // e.preventDefault();
-    // dispatch(updateSong(updatedSong));
-    // setTitle("");
-    // setArtist("");
-    // setAlbum("");
-    // setGenre("");
-    // window.location.reload();
+    e.preventDefault();
+    dispatch(updateSong(updatedSong));
+    setTitle("");
+    setArtist("");
+    setAlbum("");
+    setGenre("");
+    window.location.reload();
   };
 
   const handleSubmit = (e) => {
-    // props.song ? handleUpdate(e) : handleAdd(e);
+    props.song ? handleUpdate(e) : handleAdd(e);
   };
 
   return (
