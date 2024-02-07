@@ -82,12 +82,13 @@ const AddSong = (props) => {
 
   const handleAdd = (e) => {
     e.preventDefault();
-    dispatch(postSong(data));
-    setTitle("");
-    setArtist("");
-    setAlbum("");
-    setGenre("");
-    window.location.reload();
+    console.lod(data);
+    // dispatch(postSong(data));
+    // setTitle("");
+    // setArtist("");
+    // setAlbum("");
+    // setGenre("");
+    // window.location.reload();
   };
 
   if (props.song) {
