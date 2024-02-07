@@ -3,7 +3,7 @@ import { getAlbumsSuccess } from "./albumsSlice";
 
 function* WorkGetAlbumsFetch() {
   const albums = yield call(() =>
-    fetch("https://addis-music-frontend.vercel.app/albums")
+    fetch("https://https://addis-music-api.vercel.app/albums")
   );
   const formattedArtists = yield albums.json();
   yield put(getAlbumsSuccess(formattedArtists));
