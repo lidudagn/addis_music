@@ -9,12 +9,12 @@ import {
   postSongSuccess,
 } from "./songsSlice";
 
-function* WorkGetSongsFetch() {
+// function* WorkGetSongsFetch() {
   
-  const songs = yield call(() => fetch("https://addis-music-api.vercel.app/songs"));
-  const formattedSongs = yield songs.json();
-  yield put(getSongsSuccess(formattedSongs));
-}
+//   const songs = yield call(() => fetch("https://addis-music-api.vercel.app/songs"));
+//   const formattedSongs = yield songs.json();
+//   yield put(getSongsSuccess(formattedSongs));
+// }
 
 function* workPostSong(action) {
   console.log(action.payload, "paylod");
