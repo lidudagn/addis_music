@@ -38,7 +38,7 @@ function* workPostSong(action) {
 
 function* workDeleteSong(action) {
   const response = yield call(() =>
-    fetch(`https://https:/addis-music-api.vercel.app/${action.payload}`, {
+    fetch(`https://addis-music-api.vercel.app/${action.payload}`, {
       method: "DELETE",
     })
   );
