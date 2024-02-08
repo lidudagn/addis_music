@@ -28,7 +28,7 @@ function* workPostSong(action) {
   })
   );
   
-  // console.log(response);
+  console.log(response);
   const isPosting = yield select((state) => state.songs.isPosting);
   if (!isPosting) {
     yield put(postSong());
