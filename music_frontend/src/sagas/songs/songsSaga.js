@@ -10,31 +10,23 @@ import {
 } from "./songsSlice";
 
 function* WorkGetSongsFetch() {
-  try {
-    const songs = yield call(() => fetch("https://addis-music-api.vercel.app/songs"));
-    const formattedSongs = yield songs.json();
-    yield put(getSongsSuccess(formattedSongs));
-  } catch (error) {
-    yield put(getSongsError(error));
-  }
+  
+  const songs = yield call(() => fetch("https://addis-music-api.vercel.app/songs"));
+  const formattedSongs = yield songs.json();
+  yield put(getSongsSuccess(formattedSongs));
 }
+
 function* workPostSong(action) {
-  try {
-    console.log(action.payload, "payload");
-    const response = yield call(() =>
-      fetch("https://addis-music-api.vercel.app/songs", {
-        method: "POST",
-        body: JSON.stringify(action.payload),
-        headers: {
-          "Content-Type": "application/json",
-        },
-      })
-    );
-    // Handle the response as needed
-  } catch (error) {
-console.lconsole.log(error)
-  }
-}
+  console.log(action.payload, "paylod");
+  const response = yield call(() =>
+    fetch("https://addis-music-api.vercel.app/songs", {
+    method: "POST",
+      body: JSON.stringify(action.payload),
+      headers: {
+        "Content-Type": "application/json",
+      },
+  })
+  );
   console.log(response);
   const isPosting = yield select((state) => state.songs.isPosting);
   if (!isPosting) {
@@ -42,7 +34,7 @@ console.lconsole.log(error)
     const newSong = yield response.json();
     yield put(postSongSuccess(newSong));
   }
-
+}
 
 function* workDeleteSong(action) {
   const response = yield call(() =>
