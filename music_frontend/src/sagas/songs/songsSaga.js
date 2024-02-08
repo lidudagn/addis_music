@@ -9,21 +9,11 @@ import {
   postSongSuccess,
 } from "./songsSlice";
 
-// function* WorkGetSongsFetch() {
-  
-//   const songs = yield call(() => fetch("https://addis-music-api.vercel.app/songs"));
-//   const formattedSongs = yield songs.json();
-//   yield put(getSongsSuccess(formattedSongs));
-// }
 function* WorkGetSongsFetch() {
-  try {
-    const songs = yield call(() => fetch("https://addis-music-api.vercel.app/songs"));
-    const formattedSongs = yield songs.json();
-    yield put(getSongsSuccess(formattedSongs));
-  } catch (error) {
-    console.error("Error fetching songs:", error);
-    // Handle the error, show appropriate messages or take any necessary actions
-  }
+  
+  const songs = yield call(() => fetch("https://addis-music-api.vercel.app/songs"));
+  const formattedSongs = yield songs.json();
+  yield put(getSongsSuccess(formattedSongs));
 }
 
 function* workPostSong(action) {
