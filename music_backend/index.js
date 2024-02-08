@@ -1,21 +1,13 @@
 const express = require("express");
-const port =4000
-//const port = process.env.PORT || 9000;
+const port = 4000;
 const musicRouter = require("./routes/MusicRoutes");
 const connectDB = require("./config/db");
-const dotenv = require("dotenv").config()
+const dotenv = require("dotenv").config();
 const cors = require("cors");
 
 const app = express();
 
-
-const corsOptions = {
-  origin: "https://addis-music-project.vercel.app/",
-  credentials: true, //acces
-};
-
-
-app.use(cors(corsOptions));
+app.use(cors()); // Enable CORS for all routes
 
 connectDB();
 
@@ -25,5 +17,5 @@ app.use(express.urlencoded({ extended: false }));
 app.use("/", musicRouter);
 
 app.listen(port, () => {
-  console.log(`server is running on port ${port}`);
+  console.log(`Server is running on port ${port}`);
 });
