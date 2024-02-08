@@ -19,7 +19,7 @@ function* WorkGetSongsFetch() {
 function* workPostSong(action) {
   console.log(action.payload, "paylod");
   const response = yield call(() =>
-    fetch("https://https://addis-music-api.vercel.app/songs", {
+    fetch("https://addis-music-api.vercel.app/songs", {
     method: "POST",
       body: JSON.stringify(action.payload),
       headers: {
